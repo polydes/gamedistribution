@@ -91,4 +91,14 @@
 		<fields/>
 	</block>
 
+	<block
+		tag="def-gamedistribution"
+		spec="gamedistribution [c:gdsdk]"
+		code="gamedistribution"
+		type="normal"
+		color="charcoal"
+		returns="boolean">
+		<fields />
+	</block>
+
 </blocks>
