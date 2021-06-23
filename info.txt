@@ -1,0 +1,8 @@
+name=Gamedistribution SDK
+description=Gamedistribution SDK
+author=dtishin and Justin Espedal
+website=https://gamedistribution.com/sdk/html5
+version=1.0.0
+compatibility=all
+dependencies=stencyl-4.1.0
+repository=http://www.polydes.com/repo

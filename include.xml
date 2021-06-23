@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<section if="html5">
+		<source path="src" />
+		<template path="templates" />
+	</section>
+</project>
