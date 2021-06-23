@@ -47,6 +47,59 @@
 	<div id="openfl-content"><progress id="progress" value="0" max = "1"></progress></div>
 	
 	<script>
+
+		//https://stackoverflow.com/a/17528961
+		var Queue = (function () {
+
+			Queue.prototype.ready = false;
+			Queue.prototype.running = false;
+			Queue.prototype.queue = [];
+
+			function Queue() {
+			};
+
+			Queue.prototype.add = function (event) {
+				var _this = this;
+				this.queue.push(function () {
+					document.getElementById("openfl-content").onGameDistributionEvent(event);
+					_this.dequeue();
+				});
+
+				if (this.ready && !this.running) {
+					this.dequeue();
+				}
+			};
+
+			Queue.prototype.dequeue = function () {
+				this.running = false;
+				//get the first element off the queue
+				var shift = this.queue.shift();
+				if (shift) {
+					this.running = true;
+					shift();
+				}
+			};
+
+			Queue.prototype.next = Queue.prototype.dequeue;
+
+			return Queue;
+
+		})();
+
+		const gdsdkQueue = new Queue();
+
+		window["GD_OPTIONS"] = {
+			"gameId": "::GD_GAME_ID::",
+			"onEvent": function(event) {
+				gdsdkQueue.add(event);
+			},
+		};
+
+		function gdsdkReady()
+		{
+			gdsdkQueue.ready = true;
+			gdsdkQueue.next();
+		}
 		
 		var __filesToLoad = {::if linkedLibraries::::foreach (linkedLibraries)::
 			"::__current__.name::": {total: ::__current__.size::},::end::::end::

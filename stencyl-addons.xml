@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stencyl-addons>
+
+	<property-page-addon target="dashboard.sidebar">
+		<header label="Gamedistribution"/>
+		<field name="gdGameID" label="Game ID" />
+	</property-page-addon>
+
+</stencyl-addons>

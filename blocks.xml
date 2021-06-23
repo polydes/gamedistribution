@@ -1,4 +1,94 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <blocks>
 
+	<block
+		tag="gamedistribution-init"
+		spec="init [c:gdsdk] SDK"
+		code='com.gamedistribution.GameDistributionSDK.init();'
+		type="action"
+		color="gray"
+		returns="void">
+		<fields/>
+	</block>
+
+	<block
+		tag="gamedistribution-event-addremove-all-listener"
+		spec="%0 listener %1 for all [c:gdsdk] events"
+		code='com.gamedistribution.GameDistributionSDK.allEventListeners.#0(_customBlock_#1);'
+		type="action"
+		color="gray"
+		returns="void">
+		<fields>
+			<dropdown order="0">
+				<choices>
+					<c text="add" code="push"/>
+					<c text="remove" code="remove"/>
+				</choices>
+			</dropdown>
+			<code order="1"/>
+		</fields>
+	</block>
+
+	<block
+		tag="gamedistribution-event-name"
+		spec="[sp] %0 [sp]"
+		code='"#0"'
+		type="normal"
+		color="gray"
+		returns="text">
+		<fields>
+			<dropdown order="0">
+				<choices>
+					<c text="--SDK Events--" code=""/>
+					<c text="SDK_READY (SDK is ready)" code="SDK_READY"/>
+					<c text="SDK_ERROR (SDK has hit a critical error)" code="SDK_ERROR"/>
+					<c text="SDK_GAME_START (game should start)" code="SDK_GAME_START"/>
+					<c text="SDK_GAME_PAUSE (game should pause)" code="SDK_GAME_PAUSE"/>
+					<c text="SDK_GDPR_TRACKING (publishers' client has requested to not track his/ her data)" code="SDK_GDPR_TRACKING"/>
+					<c text="SDK_GDPR_TARGETING (publishers' client has requested to not get personalized advertisements)" code="SDK_GDPR_TARGETING"/>
+					<c text="SDK_GDPR_THIRD_PARTY (publishers' client has requested to not load third party services)" code="SDK_GDPR_THIRD_PARTY"/>
+					<c text="--IMA SDK Events--" code=""/>
+					<c text="AD_SDK_MANAGER_READY (the adsManager instance is ready with ads)" code="AD_SDK_MANAGER_READY"/>
+					<c text="AD_SDK_CANCELED (the ad is cancelled or stopped because it's done running an ad)" code="AD_SDK_CANCELED"/>
+					<c text="--Ad Events--" code=""/>
+					<c text="LOADED (ad data is available)" code="LOADED"/>
+					<c text="STARTED (the ad starts playing)" code="STARTED"/>
+					<c text="PAUSED (the ad is paused)" code="PAUSED"/>
+					<c text="RESUMED (the ad is resumed)" code="RESUMED"/>
+					<c text="CLICK (the ad is clicked)" code="CLICK"/>
+					<c text="INTERACTION (an ad triggers the interaction callback)" code="INTERACTION"/>
+					<c text="SKIPPED (the ad is skipped by the user)" code="SKIPPED"/>
+					<c text="USER_CLOSE (the ad is closed by the user)" code="USER_CLOSE"/>
+					<c text="FIRST_QUARTILE (the ad playhead crosses first quartile)" code="FIRST_QUARTILE"/>
+					<c text="MIDPOINT (the ad playhead crosses midpoint)" code="MIDPOINT"/>
+					<c text="THIRD_QUARTILE (the ad playhead crosses third quartile)" code="THIRD_QUARTILE"/>
+					<c text="COMPLETE (the ad completes playing)" code="COMPLETE"/>
+					<c text="IMPRESSION (the impression URL has been pinged)" code="IMPRESSION"/>
+					<c text="CONTENT_PAUSE_REQUESTED (content should be paused)" code="CONTENT_PAUSE_REQUESTED"/>
+					<c text="CONTENT_RESUME_REQUESTED (content should be resumed)" code="CONTENT_RESUME_REQUESTED"/>
+					<c text="AD_ERROR (the ad it self has an error)" code="AD_ERROR"/>
+					<c text="AD_BREAK_READY (an ad rule or a VMAP ad break would have played if autoPlayAdBreaks is false)" code="AD_BREAK_READY"/>
+					<c text="AD_METADATA (an ads list is loaded)" code="AD_METADATA"/>
+					<c text="ALL_ADS_COMPLETED (the ads manager is done playing all the ads)" code="ALL_ADS_COMPLETED"/>
+					<c text="LOG (a non-fatal error is encountered)" code="LOG"/>
+					<c text="DURATION_CHANGE (the ad's duration changes)" code="DURATION_CHANGE"/>
+					<c text="LINEAR_CHANGED (the displayed ad changes from linear to nonlinear, or vice versa)" code="LINEAR_CHANGED"/>
+					<c text="SKIPPABLE_STATE_CHANGED (the displayed ads skippable state is changed)" code="SKIPPABLE_STATE_CHANGED"/>
+					<c text="VOLUME_CHANGED (the ad volume has changed)" code="VOLUME_CHANGED"/>
+					<c text="VOLUME_MUTED (the ad volume has been muted)" code="VOLUME_MUTED"/>
+				</choices>
+			</dropdown>
+		</fields>
+	</block>
+
+	<block
+		tag="gamedistribution-showad"
+		spec="show [c:gdsdk] ad"
+		code='com.gamedistribution.GameDistributionSDK.showAd();'
+		type="action"
+		color="gray"
+		returns="void">
+		<fields/>
+	</block>
+
 </blocks>
