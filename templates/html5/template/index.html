@@ -89,7 +89,7 @@
 		const gdsdkQueue = new Queue();
 
 		window["GD_OPTIONS"] = {
-			"gameId": "::GD_GAME_ID::",
+			"gameId": "::SET_GD_GAME_ID::",
 			"onEvent": function(event) {
 				gdsdkQueue.add(event);
 			},
