@@ -1,7 +1,7 @@
 name=Gamedistribution SDK
 description=Gamedistribution SDK
 author=dtishin and Justin Espedal
-website=https://gamedistribution.com/sdk/html5
+website=http://www.polydes.com/repo/engine/com.gamedistribution
 version=1.0.0
 compatibility=all
 dependencies=toolset-com.polydes.configurations-0.0.1,stencyl-4.1.0
