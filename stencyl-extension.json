@@ -1,0 +1,19 @@
+{
+  "group": "com.polydes",
+  "id": "com.gamedistribution",
+  "name": "Gamedistribution SDK",
+  "description": "Gamedistribution SDK wrapper",
+  "tags": ["portal"],
+  "type": "game",
+  "author": "dtishin and Justin Espedal",
+  "website": "https://www.polydes.com/repo/engine/com.gamedistribution",
+  "repository": "https://www.polydes.com/repo",
+  "target": "stencyl-4.2.0",
+  "version": "1.1.0",
+
+  "icon": "icon.png",
+
+  "engine": {
+    "compatibility": "html5"
+  }
+}

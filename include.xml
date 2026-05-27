@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
-	<section if="html5 gamedistribution">
+	<define name="gamedistribution" unless="configurations" />
+	<section if="gamedistribution">
 		<set name="GD_GAME_ID" value="${gdGameID}" />
 		<source path="src" />
 		<dependency name="https://html5.api.gamedistribution.com/main.min.js" />
