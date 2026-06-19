@@ -1,0 +1,11 @@
+{
+  "versions":
+  [
+    {
+      "date": "06/23/2021",
+      "changes": "Initial version.",
+      "version": "1.0.0",
+      "dependencies": "toolset-com.polydes.configurations-0.0.1,stencyl-4.1.0"
+    }
+  ]
+}
